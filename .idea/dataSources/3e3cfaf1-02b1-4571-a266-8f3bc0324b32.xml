@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="PostgreSQL - project-diary@localhost">
+  <database-model serializer="dbm" rdbms="POSTGRES" format-version="4.2">
+    <root id="1"/>
+    <database id="2" parent="1" name="project-diary">
+      <ObjectId>16396</ObjectId>
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </database>
+    <schema id="3" parent="2" name="public">
+      <ObjectId>2200</ObjectId>
+      <IntrospectionTimestamp>2018-03-14.01:25:40.901</IntrospectionTimestamp>
+      <IntrospectionStateNumber>578</IntrospectionStateNumber>
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="4" parent="2" name="pg_catalog">
+      <ObjectId>11</ObjectId>
+    </schema>
+    <schema id="5" parent="2" name="pg_toast">
+      <ObjectId>99</ObjectId>
+    </schema>
+    <schema id="6" parent="2" name="pg_temp_1">
+      <ObjectId>11736</ObjectId>
+    </schema>
+    <schema id="7" parent="2" name="pg_toast_temp_1">
+      <ObjectId>11737</ObjectId>
+    </schema>
+    <schema id="8" parent="2" name="information_schema">
+      <ObjectId>12648</ObjectId>
+    </schema>
+    <sequence id="9" parent="3" name="table_name_id_seq">
+      <ObjectId>16428</ObjectId>
+      <StateNumber>577</StateNumber>
+      <BelongsToColumn>1</BelongsToColumn>
+    </sequence>
+    <sequence id="10" parent="3" name="users_id_seq">
+      <ObjectId>16397</ObjectId>
+      <StateNumber>562</StateNumber>
+      <BelongsToColumn>1</BelongsToColumn>
+    </sequence>
+    <table id="11" parent="3" name="orders">
+      <ObjectId>16430</ObjectId>
+      <StateNumber>578</StateNumber>
+    </table>
+    <table id="12" parent="3" name="users">
+      <ObjectId>16399</ObjectId>
+      <StateNumber>562</StateNumber>
+    </table>
+    <column id="13" parent="11" name="username">
+      <Position>1</Position>
+      <DataType>varchar(255)|0</DataType>
+      <StateNumber>577</StateNumber>
+    </column>
+    <column id="14" parent="11" name="origin">
+      <Position>2</Position>
+      <DataType>varchar(1023)|0</DataType>
+      <StateNumber>577</StateNumber>
+    </column>
+    <column id="15" parent="11" name="destination">
+      <Position>3</Position>
+      <DataType>varchar(1023)|0</DataType>
+      <StateNumber>577</StateNumber>
+    </column>
+    <column id="16" parent="11" name="created">
+      <Position>4</Position>
+      <DataType>timestamp|0</DataType>
+      <StateNumber>577</StateNumber>
+    </column>
+    <column id="17" parent="11" name="id">
+      <Position>5</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>577</StateNumber>
+      <SequenceName>table_name_id_seq</SequenceName>
+      <DefaultExpression>nextval(&apos;table_name_id_seq&apos;::regclass)</DefaultExpression>
+    </column>
+    <index id="18" parent="11" name="table_name_pkey">
+      <ObjectId>16437</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="19" parent="11" name="table_name_pkey">
+      <ObjectId>16438</ObjectId>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>table_name_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="20" parent="12" name="username">
+      <Position>1</Position>
+      <DataType>varchar(255)|0</DataType>
+      <StateNumber>562</StateNumber>
+    </column>
+    <column id="21" parent="12" name="password">
+      <Position>2</Position>
+      <DataType>varchar(255)|0</DataType>
+      <StateNumber>562</StateNumber>
+    </column>
+    <column id="22" parent="12" name="id">
+      <Position>3</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>562</StateNumber>
+      <SequenceName>users_id_seq</SequenceName>
+      <DefaultExpression>nextval(&apos;users_id_seq&apos;::regclass)</DefaultExpression>
+    </column>
+    <index id="23" parent="12" name="users_username_uindex">
+      <ObjectId>16408</ObjectId>
+      <ColNames>username</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="24" parent="12" name="users_pkey">
+      <ObjectId>16406</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="25" parent="12" name="users_pkey">
+      <ObjectId>16407</ObjectId>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>users_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+  </database-model>
+</dataSource>
